@@ -12,7 +12,7 @@ OpenFL Samples (ES5)
 git clone https://github.com/openfl/openfl-samples-es5
 ```
 
-### Change the directory to one of the samples
+### Choose a sample
 
 ```bash
 cd openfl-samples-es5/helloworld
