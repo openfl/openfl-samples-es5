@@ -1,23 +1,11 @@
-var Application = require ("openfl/display/Application").default;
-var Sprite = require ("openfl/display/Sprite").default;
 var Loader = require ("openfl/display/Loader").default;
+var Sprite = require ("openfl/display/Sprite").default;
+var Stage = require ("openfl/display/Stage").default;
 var URLRequest = require ("openfl/net/URLRequest").default;
 var Event = require ("openfl/events/Event").default;
 
-var div = document.createElement ("div");
-document.body.appendChild (div);
-
-var app = new Application ();
-app.create ({
-	windows: [{
-		width: 550,
-		height: 400,
-		element: div
-	}]
-});
-app.exec ();
-
-var stage = app.window.stage;
+var stage = new Stage (550, 400);
+document.body.appendChild (stage.element);
 
 var Main = function () {
 	
