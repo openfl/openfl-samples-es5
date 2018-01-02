@@ -1,3 +1,4 @@
+"use strict";
 var CapsStyle = require ("openfl/display/CapsStyle").default;
 var Graphics = require ("openfl/display/Graphics").default;
 var Sprite = require ("openfl/display/Sprite").default;

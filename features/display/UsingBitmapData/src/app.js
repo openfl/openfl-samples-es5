@@ -1,3 +1,4 @@
+"use strict";
 var Bitmap = require ("openfl/display/Bitmap").default;
 var BitmapData = require ("openfl/display/BitmapData").default;
 var BitmapDataChannel = require ("openfl/display/BitmapDataChannel").default;
