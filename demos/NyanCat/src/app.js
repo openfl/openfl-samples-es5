@@ -1,3 +1,4 @@
+"use strict";
 var Sprite = require ("openfl/display/Sprite").default;
 var Stage = require ("openfl/display/Stage").default;
 var AssetLibrary = require ("openfl/utils/AssetLibrary").default;
