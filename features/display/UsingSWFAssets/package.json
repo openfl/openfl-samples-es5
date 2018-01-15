@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "openfl": "*",
+    "openfl": "^7.0.0",
     "swf-loader": "^1.0.1",
     "uglifyjs-webpack-plugin": "^1.1.4",
     "webpack": "^3.10.0",
