@@ -105,7 +105,7 @@ AssetLibrary.loadFromManifest (manifest).onComplete (function (library) {
 	
 	Assets.registerLibrary ("default", library);
 	
-	var stage = new Stage (550, 400, 0xFFFFFF, App);
+	var stage = new Stage (670, 400, 0xFFFFFF, App);
 	document.body.appendChild (stage.element);
 	
 }).onError (function (e) {
