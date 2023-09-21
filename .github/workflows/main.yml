@@ -102,8 +102,9 @@ jobs:
           if-no-files-found: error
       - name: Build features/display/UsingSWFAssets
         working-directory: features/display/UsingSWFAssets
+        # TODO: remove --force when swf-loader is updated
         run: |
-          npm ci
+          npm ci --force
           npm run build:prod
         env:
           CI: true
