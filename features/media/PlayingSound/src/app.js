@@ -44,7 +44,7 @@ App.prototype.pause = function (fadeOut = 1.2) {
 		
 		this.playing = false;
 		
-		Actuate.transform (this.channel, fadeOut).sound (0, 0).onComplete (stop);
+		Actuate.transform (this.channel, fadeOut).sound (0, 0).onComplete (this.stop);
 		Actuate.tween (this.background, fadeOut, { alpha: 0.1 });
 		
 	}

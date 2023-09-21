@@ -39,3 +39,39 @@ jobs:
           name: NyanCat
           path: demos/NyanCat/dist
           if-no-files-found: error
+      - name: Build features/media/PlayingSound
+        working-directory: features/media/PlayingSound
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: PlayingSound
+          path: features/media/PlayingSound/dist
+          if-no-files-found: error
+      - name: Build features/media/PlayingVideo
+        working-directory: features/media/PlayingVideo
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: PlayingVideo
+          path: features/media/PlayingVideo/dist
+          if-no-files-found: error
+      - name: Build features/text/AddingText
+        working-directory: features/text/AddingText
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: AddingText
+          path: features/text/AddingText/dist
+          if-no-files-found: error
