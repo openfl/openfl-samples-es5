@@ -27,7 +27,7 @@ App.prototype = Sprite.prototype;
 
 App.prototype.update = function (deltaTime) {
 	
-	if (this.sprite.x + this.sprite.width >= stage.stageWidth || this.sprite.x < 0) {
+	if (this.sprite.x + this.sprite.width >= this.stage.stageWidth || this.sprite.x < 0) {
 		
 		this.speed *= -1;
 		

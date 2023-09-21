@@ -39,6 +39,54 @@ jobs:
           name: NyanCat
           path: demos/NyanCat/dist
           if-no-files-found: error
+      - name: Build features/events/CreatingAMainLoop
+        working-directory: features/events/CreatingAMainLoop
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: CreatingAMainLoop
+          path: features/events/CreatingAMainLoop/dist
+          if-no-files-found: error
+      - name: Build features/events/CreatingCustomEvents
+        working-directory: features/events/CreatingCustomEvents
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: CreatingCustomEvents
+          path: features/events/CreatingCustomEvents/dist
+          if-no-files-found: error
+      - name: Build features/events/HandlingKeyboardEvents
+        working-directory: features/events/HandlingKeyboardEvents
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: HandlingKeyboardEvents
+          path: features/events/HandlingKeyboardEvents/dist
+          if-no-files-found: error
+      - name: Build features/events/HandlingMouseEvents
+        working-directory: features/events/HandlingMouseEvents
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: HandlingMouseEvents
+          path: features/events/HandlingMouseEvents/dist
+          if-no-files-found: error
       - name: Build features/media/PlayingSound
         working-directory: features/media/PlayingSound
         run: |
