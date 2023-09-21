@@ -39,6 +39,42 @@ jobs:
           name: NyanCat
           path: demos/NyanCat/dist
           if-no-files-found: error
+      - name: Build features/display3D/HelloTriangle
+        working-directory: features/display3D/HelloTriangle
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: HelloTriangle
+          path: features/display3D/HelloTriangle/dist
+          if-no-files-found: error
+      - name: Build features/display3D/Stage3DCamera
+        working-directory: features/display3D/Stage3DCamera
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Stage3DCamera
+          path: features/display3D/Stage3DCamera/dist
+          if-no-files-found: error
+      - name: Build features/display3D/Stage3DMipmap
+        working-directory: features/display3D/Stage3DMipmap
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Stage3DMipmap
+          path: features/display3D/Stage3DMipmap/dist
+          if-no-files-found: error
       - name: Build features/events/CreatingAMainLoop
         working-directory: features/events/CreatingAMainLoop
         run: |
