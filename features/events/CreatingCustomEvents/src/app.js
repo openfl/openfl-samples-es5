@@ -2,7 +2,7 @@
 var Sprite = require ("openfl/display/Sprite").default;
 var Stage = require ("openfl/display/Stage").default;
 var Event = require ("openfl/events/Event").default;
-var CustomEvent = require ("./CustomEvent").default;
+var CustomEvent = require ("./customEvent").default;
 
 
 var App = function () {
