@@ -39,6 +39,79 @@ jobs:
           name: NyanCat
           path: demos/NyanCat/dist
           if-no-files-found: error
+      - name: Build features/display/AddingAnimation
+        working-directory: features/display/AddingAnimation
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: AddingAnimation
+          path: features/display/AddingAnimation/dist
+          if-no-files-found: error
+      # DOMSprite was removed
+      # - name: Build features/display/AddingDOMElements
+      #   working-directory: features/display/AddingDOMElements
+      #   run: |
+      #     npm ci
+      #     npm run build:prod
+      #   env:
+      #     CI: true
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: AddingDOMElements
+      #     path: features/display/AddingDOMElements/dist
+      #     if-no-files-found: error
+      - name: Build features/display/DisplayingABitmap
+        working-directory: features/display/DisplayingABitmap
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: DisplayingABitmap
+          path: features/display/DisplayingABitmap/dist
+          if-no-files-found: error
+      - name: Build features/display/DrawingShapes
+        working-directory: features/display/DrawingShapes
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: DrawingShapes
+          path: features/display/DrawingShapes/dist
+          if-no-files-found: error
+      - name: Build features/display/UsingBitmapData
+        working-directory: features/display/UsingBitmapData
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: UsingBitmapData
+          path: features/display/UsingBitmapData/dist
+          if-no-files-found: error
+      - name: Build features/display/UsingSWFAssets
+        working-directory: features/display/UsingSWFAssets
+        run: |
+          npm ci
+          npm run build:prod
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: UsingSWFAssets
+          path: features/display/UsingSWFAssets/dist
+          if-no-files-found: error
       - name: Build features/display3D/HelloTriangle
         working-directory: features/display3D/HelloTriangle
         run: |
