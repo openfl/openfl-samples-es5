@@ -51,19 +51,6 @@ jobs:
           name: AddingAnimation
           path: features/display/AddingAnimation/dist
           if-no-files-found: error
-      # DOMSprite was removed
-      # - name: Build features/display/AddingDOMElements
-      #   working-directory: features/display/AddingDOMElements
-      #   run: |
-      #     npm ci
-      #     npm run build:prod
-      #   env:
-      #     CI: true
-      # - uses: actions/upload-artifact@v3
-      #   with:
-      #     name: AddingDOMElements
-      #     path: features/display/AddingDOMElements/dist
-      #     if-no-files-found: error
       - name: Build features/display/DisplayingABitmap
         working-directory: features/display/DisplayingABitmap
         run: |
