@@ -19,5 +19,8 @@ module.exports = {
 				"public"
 			]
 		})
-	]
+	],
+	performance: {
+		hints: false
+	}
 };
